@@ -9,7 +9,8 @@ Authors@R: person(given = "John", family = "Muschelli",
 License: GPL-3
 Imports:
     httr, 
-    xml2
+    xml2,
+    jsonlite
 Suggests: 
     knitr,
     rmarkdown,

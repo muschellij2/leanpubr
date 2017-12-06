@@ -1,9 +1,10 @@
 get_results = function(
   url, query = list(),
-  verbose = TRUE, nonstop = FALSE, ...) {
-  res = httr::GET(url, query = query, ...)
+  verbose = TRUE, nonstop = FALSE,
+  verb = "GET", ...) {
+  res = do.call(verb, list(url = url, query = query, ...))
   if (verbose) {
-    message("GET command is:")
+    message(paste0(verb, " command is:"))
     print(res)
   }
   if (!nonstop) {
@@ -17,17 +18,14 @@ get_results = function(
 }
 
 
-post_json = function(
+post_type = function(
   url,
-  config = list(),
-  body = NULL,
+  type = "json",
   verbose = TRUE,
   nonstop = FALSE, ...) {
 
   res = httr::POST(url,
-                   config = config,
-                   body = body,
-                   httr::content_type_json(), ...)
+                   content_type(type), ...)
   if (verbose) {
     message("POST command is:")
     print(res)

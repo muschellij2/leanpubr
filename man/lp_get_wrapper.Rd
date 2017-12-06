@@ -2,9 +2,13 @@
 % Please edit documentation in R/lp_get_wrapper.R
 \name{lp_get_wrapper}
 \alias{lp_get_wrapper}
-\title{Leanpub Wrapper for GET statements}
+\alias{lp_post_wrapper}
+\title{Leanpub Wrapper for GET/POST statements}
 \usage{
 lp_get_wrapper(slug, endpoint, api_key = NULL, secure = TRUE,
+  verbose = TRUE, ...)
+
+lp_post_wrapper(slug, endpoint, api_key = NULL, secure = TRUE,
   verbose = TRUE, ...)
 }
 \arguments{
@@ -25,7 +29,7 @@ List of the result of the \code{\link{GET}} call and
 the content
 }
 \description{
-Leanpub Wrapper for GET statements
+Leanpub Wrapper for GET/POST statements
 }
 \note{
 See \url{https://leanpub.com/help/api}

@@ -1,4 +1,4 @@
-#' Leanpub Wrapper for GET statements
+#' Leanpub Wrapper for GET/POST statements
 #'
 #' @param slug slug of the project
 #' @param endpoint call to the api endpoint
@@ -14,7 +14,7 @@
 #' @export
 #'
 #' @importFrom httr GET stop_for_status warn_for_status content
-#' @importFrom httr POST content_type_json
+#' @importFrom httr POST content_type_json content_type
 #' @importFrom xml2 read_html
 #' @examples
 #' stat = lp_get_wrapper(slug = "neuroimagingforstatisticians",
@@ -36,7 +36,15 @@ lp_get_wrapper = function(
 
   url = lp_base_url(secure = secure)
   path = paste0("/", slug, endpoint)
-  path = paste0(path, ".json")
+  ending = ".json"
+  if ("add_json" %in% names(L)) {
+    add_json = L$add_json
+    if (!add_json) {
+      ending = ""
+    }
+  }
+  path = paste0(path, ending)
+
   url = paste0(url, path)
 
   if ("query" %in% names(L)) {
@@ -51,4 +59,46 @@ lp_get_wrapper = function(
     verbose = verbose, ...)
 
   return(L)
+}
+
+#' @rdname lp_get_wrapper
+#' @importFrom jsonlite toJSON
+#' @export
+lp_post_wrapper = function(
+  slug,
+  endpoint,
+  api_key = NULL,
+  secure = TRUE,
+  verbose = TRUE,
+  ...) {
+
+  L = list(...)
+  if ("error" %in% names(L)) {
+    error = L$error
+  } else {
+    error = TRUE
+  }
+  api_key = lp_api_key(api_key = api_key, error = error)
+
+  url = lp_base_url(secure = secure)
+  path = paste0("/", slug, endpoint)
+  path = paste0(path, ".json")
+  url = paste0(url, path)
+
+  if ("body" %in% names(L)) {
+    body = L$body
+  } else {
+    body = list()
+  }
+  body$api_key = api_key
+
+
+  L = post_type(
+    url = url,
+    body = body,
+    verbose = verbose,
+    ...)
+
+  return(L)
+
 }
