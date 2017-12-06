@@ -18,13 +18,14 @@
 #' @importFrom xml2 read_html
 #' @examples
 #' stat = lp_get_wrapper(slug = "neuroimagingforstatisticians",
-#'     endpoint = "/job_status", nonstop = TRUE)
-lp_get_wrapper = function(slug,
-                          endpoint,
-                          api_key = NULL,
-                          secure = TRUE,
-                          verbose = TRUE,
-                          ...) {
+#'     endpoint = "/job_status", nonstop = TRUE, error = FALSE)
+lp_get_wrapper = function(
+  slug,
+  endpoint,
+  api_key = NULL,
+  secure = TRUE,
+  verbose = TRUE,
+  ...) {
   L = list(...)
   if ("error" %in% names(L)) {
     error = L$error

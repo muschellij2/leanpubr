@@ -29,5 +29,5 @@ See \url{https://leanpub.com/help/api}
 }
 \examples{
 stat = lp_job_status(slug = "neuroimagingforstatisticians",
-nonstop = TRUE)
+nonstop = TRUE, error = FALSE)
 }

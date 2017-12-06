@@ -32,5 +32,5 @@ See \url{https://leanpub.com/help/api}
 }
 \examples{
 stat = lp_get_wrapper(slug = "neuroimagingforstatisticians",
-    endpoint = "/job_status", nonstop = TRUE)
+    endpoint = "/job_status", nonstop = TRUE, error = FALSE)
 }

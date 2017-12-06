@@ -10,7 +10,7 @@
 #'
 #' @examples
 #' stat = lp_job_status(slug = "neuroimagingforstatisticians",
-#' nonstop = TRUE)
+#' nonstop = TRUE, error = FALSE)
 lp_job_status = function(slug,
                          api_key = NULL,
                          secure = TRUE,
