@@ -1,0 +1,20 @@
+language: R
+sudo: false
+cache: packages
+after_success: if [ "$TRAVIS_OS_NAME" == "linux" ]; then Rscript -e 'covr::coveralls(type
+  = "all")'; fi
+warnings_are_errors: true
+before_deploy: if [ "$TRAVIS_OS_NAME" == "osx" ]; then rm -f *.tar.gz; fi
+r_check_args: "--as-cran --install-args=--build"
+
+deploy:
+  provider: releases
+  api_key:
+    secure: P2Rbh74UOKTSYe2Fq6FYgA5vZkQ5gGD957Y4bNigdt+OcxXxcuAgdVmYlNhXITL1UD10pkGUxA7zvJBr0QCtV3Xl2xr7nfB+s6u0yupHKKBKsVmBNVD2Ep9AL+VXWSoclkZEWG0ryhtakdKap30x8qII3pRfAk33TlW5NoFE6ADARf9imAvCWuKOOtGHnYNxUNnZcLY6Unc101dHVnXHV3Pk5nRv9P4GW2C3SrnghQyycraWANFs7arZ2jWv3YmdDYcuN0V05zu6tKyBnHPTr0rD4bk64dCsa2D9AAwpk7UWlYsKj8n0uzozqq4EFV6tofPdwLCC3nvC6RulhpB3+xX5S98HIL4VBGXaMMrTMHwPZkVkaNY3Xt88prcBIuOi80+Km34/9KQsrgrGmknsB5B4PIrDLDxpOa947KV9x/rHif4t9YX8tKrx5rk5sPFB0McUn3siObEyjRg/dyOcqNrdR/egfXWjsxUcdkdhqVsdDKDshmH/lcmUMuUNmr1Zf0UJ+V37UROzFZlJt/1jTdTdheAW94PLPb5blVAGYeTNoq7XYtW7Zz6WtJqCs0Lgug9KOo93ZZMwau/OPiZ6fn1GZxVtU0RyZF+AWacDCV0aS0ejkUbfX5gZzzlZwbFopqvN3Fo4YbG75bPM0wh9kZVEWfr8vffpTvd3ZAGM8Ps=  
+  skip_cleanup: yes
+  file_glob: yes
+  file: leanpubr*.t*gz
+  'on':
+    tags: yes
+    repo: muschellij2/leanpubr
+

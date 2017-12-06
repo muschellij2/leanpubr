@@ -1,0 +1,27 @@
+---
+  output: github_document
+---
+
+[![Travis build status](https://travis-ci.org/muschellij2/leanpubr.svg?branch=master)](https://travis-ci.org/muschellij2/leanpubr)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/muschellij2/leanpubr?branch=master&svg=true)](https://ci.appveyor.com/project/muschellij2/leanpubr)
+[![Coverage status](https://coveralls.io/repos/github/muschellij2/leanpubr/badge.svg?branch=master)](https://coveralls.io/r/muschellij2/leanpubr?branch=master)
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-"
+)
+```
+# leanpubr Package: 
+The goal of `leanpubr` is to provide provides access to the 'Leanpub' 'API' <https://leanpub.com/help/api> for gathering information about publications and submissions to the 'Leanpub' platform.
+
+## Installation
+
+You can install `leanpubr` from GitHub with:
+
+```{r gh-installation, eval = FALSE}
+# install.packages("remotes")
+remotes::install_github("muschellij2/leanpubr")
+```
