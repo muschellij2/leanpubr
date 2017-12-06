@@ -18,7 +18,7 @@
 #' @importFrom xml2 read_html
 #' @examples
 #' stat = lp_get_wrapper(slug = "neuroimagingforstatisticians",
-#' endpoint = "job_status")
+#'     endpoint = "/job_status", nonstop = TRUE)
 lp_get_wrapper = function(slug,
                           endpoint,
                           api_key = NULL,

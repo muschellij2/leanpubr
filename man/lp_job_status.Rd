@@ -28,5 +28,6 @@ Leanpub Job Status
 See \url{https://leanpub.com/help/api}
 }
 \examples{
-stat = lp_job_status(slug = "neuroimagingforstatisticians")
+stat = lp_job_status(slug = "neuroimagingforstatisticians",
+nonstop = TRUE)
 }
