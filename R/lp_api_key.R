@@ -9,7 +9,7 @@
 #' @return Character API key
 #' @export
 #' @examples
-#' res = get_api_key(error = FALSE)
+#' res = lp_api_key(error = FALSE)
 lp_api_key = function(api_key = NULL, error = TRUE) {
   if (is.null(api_key)) {
     api_key = Sys.getenv("LEANPUB_API_KEY")

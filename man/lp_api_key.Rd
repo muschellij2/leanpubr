@@ -23,5 +23,5 @@ You can either set the API key or have it accessible by
 \code{api_key = Sys.getenv('LEANPUB_API_KEY')}.
 }
 \examples{
-res = get_api_key(error = FALSE)
+res = lp_api_key(error = FALSE)
 }
