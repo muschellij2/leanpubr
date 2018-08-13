@@ -8,10 +8,12 @@
 #' @return List of the result of the \code{\link{GET}} call and
 #' the content
 #' @importFrom httr progress warn_for_status write_disk
+#' @export
 #' @examples
 #' if (lp_have_api_key()) {
 #' slug = "biostatmethods"
-#' res = lp_download(slug, nonstop = TRUE, error = FALSE)
+#' res = lp_download(slug, verbose = FALSE, nonstop = TRUE, error = FALSE)
+#' file.exists(res)
 #' }
 lp_download = function(
   slug,
@@ -39,7 +41,7 @@ lp_download = function(
   tfile = tempfile(fileext = paste0(".", format))
   res = httr::GET(file_url,
                   httr::write_disk(path = tfile),
-                  if (interactive()) httr::progress())
+                  if (interactive() && verbose) httr::progress())
   httr::warn_for_status(res)
   ### need more here to follow the redirect
   return(tfile)
