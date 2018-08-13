@@ -8,9 +8,11 @@
 #' the content
 #' @export
 #' @examples
+#' \dontrun{
 #' if (lp_have_api_key()) {
 #' slug = "neuroimagingforstatisticians"
 #' res = lp_preview(slug, nonstop = TRUE, error = FALSE)
+#' }
 #' }
 lp_preview = function(
   slug,

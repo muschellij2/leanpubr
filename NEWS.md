@@ -1,6 +1,14 @@
-# leanpubr 0.2.2
+# leanpubr 0.3.0
 
 * First push to CRAN.
+
+* Added a downloader of PDFs and such.
+
+* Added a vignette that works.
+
+* Slight renaming of the package.
+
+# leanpubr 0.2.2
 
 * Added `lp_have_api_key` for testing.
 
