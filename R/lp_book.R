@@ -9,7 +9,9 @@
 #' @export
 #'
 #' @examples
+#' if (lp_have_api_key()) {
 #' stat = lp_book_info(slug = "modernscientist")
+#' }
 lp_book_info = function(
   slug,
   api_key = NULL,
@@ -23,7 +25,13 @@ lp_book_info = function(
     secure = secure,
     verbose = verbose,
     error = FALSE,
+    add_json = TRUE,
     ...)
   return(L)
 
 }
+
+
+#' @rdname lp_book_info
+#' @export
+lp_summary = lp_book_info

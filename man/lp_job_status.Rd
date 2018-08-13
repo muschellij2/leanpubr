@@ -4,7 +4,8 @@
 \alias{lp_job_status}
 \title{Leanpub Job Status}
 \usage{
-lp_job_status(slug, api_key = NULL, secure = TRUE, verbose = TRUE, ...)
+lp_job_status(slug, api_key = NULL, secure = TRUE, verbose = TRUE,
+  ...)
 }
 \arguments{
 \item{slug}{slug of the project}
@@ -28,6 +29,8 @@ Leanpub Job Status
 See \url{https://leanpub.com/help/api}
 }
 \examples{
+if (lp_have_api_key()) {
 stat = lp_job_status(slug = "neuroimagingforstatisticians",
 nonstop = TRUE, error = FALSE)
+}
 }

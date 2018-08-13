@@ -10,6 +10,7 @@
 #' @export
 #' @examples
 #' res = lp_api_key(error = FALSE)
+#' lp_have_api_key()
 lp_api_key = function(api_key = NULL, error = TRUE) {
   if (is.null(api_key)) {
     api_key = Sys.getenv("LEANPUB_API_KEY")
@@ -31,4 +32,12 @@ lp_api_key = function(api_key = NULL, error = TRUE) {
                 "accessed by Sys.getenv('LEANPUB_API_KEY')"))
   }
   return(api_key)
+}
+
+
+#' @rdname lp_api_key
+#' @export
+lp_have_api_key = function(api_key = NULL) {
+  api_key = lp_api_key(api_key = api_key, error = FALSE)
+  !is.null(api_key)
 }

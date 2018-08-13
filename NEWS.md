@@ -1,6 +1,8 @@
-# leanpubr 0.2.1
+# leanpubr 0.2.2
 
 * First push to CRAN.
+
+* Added `lp_have_api_key` for testing.
 
 # leanpubr 0.1.0
 

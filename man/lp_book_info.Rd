@@ -2,9 +2,13 @@
 % Please edit documentation in R/lp_book.R
 \name{lp_book_info}
 \alias{lp_book_info}
+\alias{lp_summary}
 \title{Leanpub Book Information}
 \usage{
-lp_book_info(slug, api_key = NULL, secure = TRUE, verbose = TRUE, ...)
+lp_book_info(slug, api_key = NULL, secure = TRUE, verbose = TRUE,
+  ...)
+
+lp_summary(slug, api_key = NULL, secure = TRUE, verbose = TRUE, ...)
 }
 \arguments{
 \item{slug}{slug of the project}
@@ -28,5 +32,7 @@ Leanpub Book Information
 See \url{https://leanpub.com/help/api}
 }
 \examples{
+if (lp_have_api_key()) {
 stat = lp_book_info(slug = "modernscientist")
+}
 }

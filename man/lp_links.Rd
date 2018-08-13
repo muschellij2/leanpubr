@@ -18,8 +18,7 @@ lp_links(slug, api_key = NULL, secure = TRUE, verbose = TRUE, ...)
 \item{...}{additional options to pass to \code{\link{GET}}}
 }
 \value{
-List of the result of the \code{\link{GET}} call and
-the content
+List of URLs
 }
 \description{
 Leanpub Links
@@ -28,6 +27,8 @@ Leanpub Links
 See \url{https://leanpub.com/help/api}
 }
 \examples{
-slug = "neuroimagingforstatisticians"
+if (lp_have_api_key()) {
+slug = "biostatmethods"
 res = lp_links(slug, nonstop = TRUE, error = FALSE)
+}
 }

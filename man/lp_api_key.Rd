@@ -2,9 +2,12 @@
 % Please edit documentation in R/lp_api_key.R
 \name{lp_api_key}
 \alias{lp_api_key}
+\alias{lp_have_api_key}
 \title{Find API Key for Leanpub}
 \usage{
 lp_api_key(api_key = NULL, error = TRUE)
+
+lp_have_api_key(api_key = NULL)
 }
 \arguments{
 \item{api_key}{Leanpub API key (\code{Sys.getenv('LEANPUB_API_KEY')})}
@@ -24,4 +27,5 @@ You can either set the API key or have it accessible by
 }
 \examples{
 res = lp_api_key(error = FALSE)
+lp_have_api_key()
 }

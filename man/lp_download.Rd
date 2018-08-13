@@ -30,3 +30,9 @@ Leanpub Download Latest Version
 \note{
 See \url{https://leanpub.com/help/api}
 }
+\examples{
+if (lp_have_api_key()) {
+slug = "biostatmethods"
+res = lp_download(slug, nonstop = TRUE, error = FALSE)
+}
+}

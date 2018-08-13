@@ -8,8 +8,10 @@
 #' the content
 #' @export
 #' @examples
+#' if (lp_have_api_key()) {
 #' slug = "neuroimagingforstatisticians"
 #' res = lp_publish(slug, nonstop = TRUE, error = FALSE)
+#' }
 lp_publish = function(
   slug,
   api_key = NULL,

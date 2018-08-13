@@ -7,7 +7,8 @@
 \usage{
 lp_sales(slug, api_key = NULL, secure = TRUE, verbose = TRUE, ...)
 
-lp_all_sales(slug, api_key = NULL, secure = TRUE, verbose = TRUE, ...)
+lp_all_sales(slug, api_key = NULL, secure = TRUE, verbose = TRUE,
+  ...)
 }
 \arguments{
 \item{slug}{slug of the project}

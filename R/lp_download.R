@@ -7,7 +7,12 @@
 #'
 #' @return List of the result of the \code{\link{GET}} call and
 #' the content
-#'
+#' @importFrom httr progress warn_for_status write_disk
+#' @examples
+#' if (lp_have_api_key()) {
+#' slug = "biostatmethods"
+#' res = lp_download(slug, nonstop = TRUE, error = FALSE)
+#' }
 lp_download = function(
   slug,
   format = c("pdf", "mobi", "epub"),
@@ -15,16 +20,27 @@ lp_download = function(
   secure = TRUE,
   verbose = TRUE,
   ...) {
+  format = tolower(format)
   format = match.arg(format)
 
-  L = lp_get_wrapper(
+  L = lp_summary(
     slug = slug,
-    endpoint = "/publish/download_latest_version",
     api_key = api_key,
     secure = secure,
     verbose = verbose,
-    add_json = FALSE,
     ...)
+
+  url_names = names(L$content)
+  n = paste0(format, "_published_url")
+  if (!(n %in% url_names)) {
+    stop(paste0("Format ", format, " URL not in summary"))
+  }
+  file_url = L$content[[n]]
+  tfile = tempfile(fileext = paste0(".", format))
+  res = httr::GET(file_url,
+                  httr::write_disk(path = tfile),
+                  if (interactive()) httr::progress())
+  httr::warn_for_status(res)
   ### need more here to follow the redirect
-  return(L)
+  return(tfile)
 }

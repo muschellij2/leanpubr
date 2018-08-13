@@ -9,8 +9,10 @@
 #' @export
 #'
 #' @examples
+#' if (lp_have_api_key()) {
 #' stat = lp_job_status(slug = "neuroimagingforstatisticians",
 #' nonstop = TRUE, error = FALSE)
+#' }
 lp_job_status = function(slug,
                          api_key = NULL,
                          secure = TRUE,

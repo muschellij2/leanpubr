@@ -5,7 +5,11 @@ get_results = function(
   res = do.call(verb, list(url = url, query = query, ...))
   if (verbose) {
     message(paste0(verb, " command is:"))
-    print(res)
+    r = res
+    parsed_url = httr::parse_url(r$url)
+    parsed_url$query$api_key = NULL
+    r$url = httr::build_url(parsed_url)
+    print(r)
   }
   if (!nonstop) {
     httr::stop_for_status(res)

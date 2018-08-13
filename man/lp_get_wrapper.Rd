@@ -35,6 +35,8 @@ Leanpub Wrapper for GET/POST statements
 See \url{https://leanpub.com/help/api}
 }
 \examples{
+if (lp_have_api_key()) {
 stat = lp_get_wrapper(slug = "neuroimagingforstatisticians",
     endpoint = "/job_status", nonstop = TRUE, error = FALSE)
+}
 }

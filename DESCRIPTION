@@ -1,5 +1,5 @@
 Package: leanpubr
-Version: 0.2.1
+Version: 0.2.2
 Title: Leanpub API
 Description: Provides access to the 'Leanpub' 'API' 
     <https://leanpub.com/help/api> for gathering information about 
@@ -24,4 +24,4 @@ Maintainer: John Muschelli <muschellij2@gmail.com>
 VignetteBuilder: knitr
 URL: https://github.com/muschellij2/leanpubr
 BugReports: https://github.com/muschellij2/leanpubr/issues
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0

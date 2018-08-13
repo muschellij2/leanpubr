@@ -17,8 +17,10 @@
 #' @importFrom httr POST content_type_json content_type
 #' @importFrom xml2 read_html
 #' @examples
+#' if (lp_have_api_key()) {
 #' stat = lp_get_wrapper(slug = "neuroimagingforstatisticians",
 #'     endpoint = "/job_status", nonstop = TRUE, error = FALSE)
+#' }
 lp_get_wrapper = function(
   slug,
   endpoint,
