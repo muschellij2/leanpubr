@@ -32,7 +32,9 @@ Leanpub Sales Information
 See \url{https://leanpub.com/help/api}
 }
 \examples{
-\dontrun{
-lp_all_sales(slug = "my_book", query = list(page=2))
+\donttest{
+if (lp_have_api_key()) {
+lp_all_sales(slug = "biostatmethods", query = list(page=2))
+}
 }
 }

@@ -1,7 +1,7 @@
 Package: leanpubr
-Version: 0.3.0
-Title: 'Leanpub' 'API' Interface
-Description: Provides access to the 'Leanpub' 'API' 
+Version: 0.3.1
+Title: 'Leanpub' API Interface
+Description: Provides access to the 'Leanpub' API
     <https://leanpub.com/help/api> for gathering information about 
     publications and submissions to the 'Leanpub' platform.
 Authors@R: person(given = "John", family = "Muschelli", 

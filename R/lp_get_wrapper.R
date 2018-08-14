@@ -34,6 +34,7 @@ lp_get_wrapper = function(
   } else {
     error = TRUE
   }
+  L$error = NULL
   api_key = lp_api_key(api_key = api_key, error = error)
 
   url = lp_base_url(secure = secure)
@@ -41,6 +42,7 @@ lp_get_wrapper = function(
   ending = ".json"
   if ("add_json" %in% names(L)) {
     add_json = L$add_json
+    L$add_json = NULL
     if (!add_json) {
       ending = ""
     }
@@ -55,10 +57,11 @@ lp_get_wrapper = function(
     query = list()
   }
   query$api_key = api_key
+  L$query = query
+  L$verbose = verbose
+  L$url = url
 
-  L = get_results(
-    url, query = query,
-    verbose = verbose, ...)
+  L = do.call(get_results, args = L)
 
   return(L)
 }

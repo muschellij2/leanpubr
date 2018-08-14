@@ -14,3 +14,11 @@
 This is a new release, so there are no reverse dependencies.
 
 ---
+
+As per CRAN resubmission:
+Thanks, please do not quote 'API' in your title and Description.
+  - done
+
+Please replace \dontrun{} by \donttest{} in your Rd-files.
+  - done
+

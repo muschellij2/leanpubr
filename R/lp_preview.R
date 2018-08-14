@@ -8,10 +8,10 @@
 #' the content
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' if (lp_have_api_key()) {
 #' slug = "neuroimagingforstatisticians"
-#' res = lp_preview(slug, nonstop = TRUE, error = FALSE)
+#' res = lp_preview(slug, nonstop = FALSE, error = FALSE)
 #' }
 #' }
 lp_preview = function(

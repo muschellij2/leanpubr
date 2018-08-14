@@ -1,3 +1,7 @@
+# leanpubr 0.3.1
+
+* Minor fixes for CRAN.
+
 # leanpubr 0.3.0
 
 * First push to CRAN.
