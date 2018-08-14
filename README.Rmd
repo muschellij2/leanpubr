@@ -25,3 +25,28 @@ You can install `leanpubr` from GitHub with:
 # install.packages("remotes")
 remotes::install_github("muschellij2/leanpubr")
 ```
+
+## Setting the API key
+The main thing you need to do is get an API key from Leanpub.  You can do this by visiting https://leanpub.com/author_dashboard/settings if you are an author.  If you are not an author, I don't believe access to the API is possible.  You can pass this `api_key` to functions in Leanpub (almost all prefixed by `lp_`), or you can set the environmental variable `LEANPUB_API_KEY`.  You can set this in an interactive `R` session such as:
+
+```r
+Sys.setenv("LEANPUB_API_KEY" = "YOUR_KEY")
+```
+
+or put this in your `~/.Renviron`:
+
+```r
+LEANPUB_API_KEY = "YOUR_KEY"
+```
+
+
+## Example
+
+You can use `lp_book_info` to get information about any book in Leanpub:
+
+```{r}
+library(leanpubr)
+slug = "biostatmethods"
+res = lp_book_info(slug, error = FALSE, verbose = TRUE)
+res$content
+```
