@@ -9,7 +9,7 @@ get_results = function(
     parsed_url = httr::parse_url(r$url)
     parsed_url$query$api_key = NULL
     r$url = httr::build_url(parsed_url)
-    print(r)
+    message(r)
   }
   if (!nonstop) {
     httr::stop_for_status(res)
@@ -32,7 +32,7 @@ post_type = function(
                    content_type(type), ...)
   if (verbose) {
     message("POST command is:")
-    print(res)
+    message(res)
   }
   if (!nonstop) {
     httr::stop_for_status(res)
