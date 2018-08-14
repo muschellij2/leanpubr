@@ -12,7 +12,8 @@
 #' @examples
 #' if (lp_have_api_key()) {
 #' slug = "biostatmethods"
-#' res = lp_download(slug, verbose = FALSE, nonstop = TRUE, error = FALSE)
+#' res = lp_download(slug, verbose = FALSE, nonstop = TRUE, error = FALSE,
+#' format = "mobi")
 #' file.exists(res)
 #' }
 lp_download = function(

@@ -28,8 +28,10 @@ Leanpub Publish
 See \url{https://leanpub.com/help/api}
 }
 \examples{
+\donttest{
 if (lp_have_api_key()) {
 slug = "neuroimagingforstatisticians"
 res = lp_publish(slug, nonstop = TRUE, error = FALSE)
+}
 }
 }
