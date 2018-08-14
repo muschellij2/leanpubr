@@ -52,10 +52,10 @@ slug = "biostatmethods"
 res = lp_book_info(slug, error = FALSE, verbose = TRUE)
 #> GET command is:
 #> Response [https://leanpub.com/biostatmethods.json]
-#>   Date: 2018-08-14 16:25
+#>   Date: 2018-08-14 16:32
 #>   Status: 200
 #>   Content-Type: application/json; charset=utf-8
-#>   Size: 1.97 kB
+#>   Size: 1.64 kB
 res$content
 #> $id
 #> [1] 46133
@@ -72,20 +72,8 @@ res$content
 #> $about_the_book
 #> [1] "<p>Biostatistics is easy to teach poorly. Too often, books focus on methodology with no emphasis on programming and practical implementations. In contrast, books focused on R programming and visualization rarely discuss foundational topics that provide the infrastructure needed by data analysts to make decisions, evaluate analytic tools, and get ready for new and unforeseen challenges. Thus, we are bridging this divide that had no reason to exist in the first place. The book is unapologetic about its focus on Biostatistics, that is Statistics with Biological, Public Health, and Medical applications, though we think that it could be used successfully for large Statistical and Data Science Courses. Data and code can be downloaded here: <a href=\"https://github.com/muschellij2/biostatmethods\" target=\"_blank\">https://github.com/muschellij2/biostatmethods</a></p>"
 #> 
-#> $total_revenue
-#> [1] "4421.59"
-#> 
 #> $last_published_at
 #> [1] "2018-07-23T20:58:06.000Z"
-#> 
-#> $word_count
-#> NULL
-#> 
-#> $page_count
-#> [1] 478
-#> 
-#> $word_count_published
-#> NULL
 #> 
 #> $page_count_published
 #> [1] 478
@@ -113,16 +101,4 @@ res$content
 #> 
 #> $image
 #> [1] "https://s3.amazonaws.com/titlepages.leanpub.com/biostatmethods/medium?1526406340"
-#> 
-#> $possible_reader_count
-#> [1] 1
-#> 
-#> $pdf_published_url
-#> [1] "http://leanpub.com/s/1zUsJAR0yCakLR1RtdCBNA.pdf"
-#> 
-#> $epub_published_url
-#> [1] "http://leanpub.com/s/1zUsJAR0yCakLR1RtdCBNA.epub"
-#> 
-#> $mobi_published_url
-#> [1] "http://leanpub.com/s/1zUsJAR0yCakLR1RtdCBNA.mobi"
 ```

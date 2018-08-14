@@ -4,8 +4,9 @@ Title: 'Leanpub' API Interface
 Description: Provides access to the 'Leanpub' API
     <https://leanpub.com/help/api> for gathering information about 
     publications and submissions to the 'Leanpub' platform.
-Authors@R: person(given = "John", family = "Muschelli", 
-        role = c("aut", "cre"), email = "muschellij2@gmail.com")
+Authors@R: c(person(given = "John", family = "Muschelli", 
+        role = c("aut", "cre"), email = "muschellij2@gmail.com",
+        comment = c(ORCID = "0000-0001-6469-1750")))
 License: GPL-3
 Imports:
     httr, 

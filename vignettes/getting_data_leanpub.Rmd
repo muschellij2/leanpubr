@@ -37,6 +37,10 @@ LEANPUB_API_KEY = "YOUR_KEY"
 
 You can use `lp_summary` or `lp_book_info`, these are identical, to get information about any book in Leanpub:
 
+```{r, echo = FALSE}
+Sys.setenv("LEANPUB_API_KEY" = "asdf")
+```
+
 ```{r}
 library(leanpubr)
 slug = "biostatmethods"
