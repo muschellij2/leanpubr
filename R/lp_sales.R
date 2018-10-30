@@ -26,9 +26,13 @@ lp_sales = function(
 
 #' @rdname lp_sales
 #' @export
+#' @param page page to extract for sales
 #' @examples \donttest{
 #' if (lp_have_api_key()) {
-#' lp_all_sales(slug = "biostatmethods", query = list(page=2))
+#' res1 = lp_all_sales(slug = "biostatmethods")
+#' nurl = lp_next_url(res1)
+#' res_next = lp_next(res1)
+#'
 #' }
 #' }
 lp_all_sales = function(
@@ -36,14 +40,49 @@ lp_all_sales = function(
   api_key = NULL,
   secure = TRUE,
   verbose = TRUE,
+  page = NULL,
   ...) {
-  L = lp_get_wrapper(
+
+  args = list(
     slug = slug,
     endpoint = "/individual_purchases",
     api_key = api_key,
     secure = secure,
-    verbose = verbose, ...)
+    verbose = verbose,
+    ...)
+  if (!is.null(page)) {
+    query = args$query
+    query$page = page
+    args$query = query
+  }
+  L = do.call(lp_get_wrapper, args = args)
   return(L)
-
 }
 
+
+#' @rdname lp_sales
+#' @param result an object of class `lp_results`, which must have
+#' a `response` slot in a list
+#' @export
+lp_next_url = function(result) {
+  url = result$response$url
+  parsed_url = httr::parse_url(url)
+  page = parsed_url$query$page
+  if (is.null(page)) {
+    page = 1
+  }
+  page = as.numeric(page)
+  page = page + 1
+  parsed_url$query$page = page
+  url = httr::build_url(parsed_url)
+  return(url)
+}
+
+#' @rdname lp_sales
+#' @export
+lp_next = function(result, ...) {
+  url = lp_next_url(result = result)
+  res = get_results(
+    url = url, ...)
+  return(res)
+}

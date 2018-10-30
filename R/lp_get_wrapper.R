@@ -62,7 +62,6 @@ lp_get_wrapper = function(
   L$url = url
 
   L = do.call(get_results, args = L)
-
   return(L)
 }
 

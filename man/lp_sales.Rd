@@ -3,12 +3,18 @@
 \name{lp_sales}
 \alias{lp_sales}
 \alias{lp_all_sales}
+\alias{lp_next_url}
+\alias{lp_next}
 \title{Leanpub Sales Information}
 \usage{
 lp_sales(slug, api_key = NULL, secure = TRUE, verbose = TRUE, ...)
 
 lp_all_sales(slug, api_key = NULL, secure = TRUE, verbose = TRUE,
-  ...)
+  page = NULL, ...)
+
+lp_next_url(result)
+
+lp_next(result, ...)
 }
 \arguments{
 \item{slug}{slug of the project}
@@ -20,6 +26,11 @@ lp_all_sales(slug, api_key = NULL, secure = TRUE, verbose = TRUE,
 \item{verbose}{print diagnostic messages}
 
 \item{...}{additional options to pass to \code{\link{GET}}}
+
+\item{page}{page to extract for sales}
+
+\item{result}{an object of class `lp_results`, which must have
+a `response` slot in a list}
 }
 \value{
 List of the result of the \code{\link{GET}} call and
@@ -34,7 +45,10 @@ See \url{https://leanpub.com/help/api}
 \examples{
 \donttest{
 if (lp_have_api_key()) {
-lp_all_sales(slug = "biostatmethods", query = list(page=2))
+res1 = lp_all_sales(slug = "biostatmethods")
+nurl = lp_next_url(res1)
+res_next = lp_next(res1)
+
 }
 }
 }
