@@ -52,10 +52,10 @@ slug = "biostatmethods"
 res = lp_book_info(slug, error = FALSE, verbose = TRUE)
 #> GET command is:
 #> Response [https://leanpub.com/biostatmethods.json]
-#>   Date: 2018-08-14 16:32
+#>   Date: 2019-04-25 19:12
 #>   Status: 200
 #>   Content-Type: application/json; charset=utf-8
-#>   Size: 1.64 kB
+#>   Size: 1.62 kB
 res$content
 #> $id
 #> [1] 46133
@@ -79,7 +79,7 @@ res$content
 #> [1] 478
 #> 
 #> $total_copies_sold
-#> [1] 537
+#> [1] 826
 #> 
 #> $meta_description
 #> [1] "Calculus and R based introduction to Biostatistics and Data Science"
@@ -91,7 +91,7 @@ res$content
 #> [1] "http://leanpub.com/biostatmethods"
 #> 
 #> $title_page_url
-#> [1] "https://s3.amazonaws.com/titlepages.leanpub.com/biostatmethods/original?1526406340"
+#> [1] "https://d2sofvawe08yqg.cloudfront.net/biostatmethods/original?1549500285"
 #> 
 #> $minimum_price
 #> [1] "9.99"
@@ -100,5 +100,5 @@ res$content
 #> [1] "20.0"
 #> 
 #> $image
-#> [1] "https://s3.amazonaws.com/titlepages.leanpub.com/biostatmethods/medium?1526406340"
+#> [1] "https://d2sofvawe08yqg.cloudfront.net/biostatmethods/medium?1549500285"
 ```

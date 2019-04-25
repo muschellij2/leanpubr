@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • leanpubr</title>
+<title>Leanpub Quiz Responses for a Course — lp_quiz_responses • leanpubr</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,7 +30,10 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Leanpub Quiz Responses for a Course — lp_quiz_responses" />
+
+<meta property="og:description" content="Leanpub Quiz Responses for a Course" />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -47,7 +50,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -109,108 +112,90 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Leanpub Quiz Responses for a Course</h1>
+    <small class="dont-index">Source: <a href='https://github.com/muschellij2/leanpubr/blob/master/R/lp_quiz_responses.R'><code>R/lp_quiz_responses.R</code></a></small>
+    <div class="hidden name"><code>lp_quiz_responses.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    
+    <p>Leanpub Quiz Responses for a Course</p>
+    
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
-
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="lp_api_key.html">lp_api_key()</a></code> <code><a href="lp_api_key.html">lp_have_api_key()</a></code> </p>
-        </td>
-        <td><p>Find API Key for Leanpub</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="lp_base_url.html">lp_base_url()</a></code> </p>
-        </td>
-        <td><p>Leanpub Base URL</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="lp_book_info.html">lp_book_info()</a></code> <code><a href="lp_book_info.html">lp_summary()</a></code> </p>
-        </td>
-        <td><p>Leanpub Book Information</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="lp_coupons.html">lp_coupons()</a></code> </p>
-        </td>
-        <td><p>Leanpub Coupons</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="lp_download.html">lp_download()</a></code> </p>
-        </td>
-        <td><p>Leanpub Download Latest Version</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="lp_get_wrapper.html">lp_get_wrapper()</a></code> <code><a href="lp_get_wrapper.html">lp_post_wrapper()</a></code> </p>
-        </td>
-        <td><p>Leanpub Wrapper for GET/POST statements</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="lp_job_status.html">lp_job_status()</a></code> </p>
-        </td>
-        <td><p>Leanpub Job Status</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="lp_links.html">lp_links()</a></code> </p>
-        </td>
-        <td><p>Leanpub Links</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="lp_preview.html">lp_preview()</a></code> </p>
-        </td>
-        <td><p>Leanpub Preview</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="lp_publish.html">lp_publish()</a></code> </p>
-        </td>
-        <td><p>Leanpub Publish</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="lp_quiz_responses.html">lp_quiz_responses()</a></code> </p>
-        </td>
-        <td><p>Leanpub Quiz Responses for a Course</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="lp_sales.html">lp_sales()</a></code> <code><a href="lp_sales.html">lp_all_sales()</a></code> <code><a href="lp_sales.html">lp_next_url()</a></code> <code><a href="lp_sales.html">lp_next()</a></code> </p>
-        </td>
-        <td><p>Leanpub Sales Information</p></td>
-      </tr>
-    </tbody>
+    <pre class="usage"><span class='fu'>lp_quiz_responses</span>(<span class='no'>slug</span>, <span class='kw'>anonymized_id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>body</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(),
+  <span class='kw'>api_key</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>secure</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>query</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(),
+  <span class='no'>...</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>slug</th>
+      <td><p>slug of the project</p></td>
+    </tr>
+    <tr>
+      <th>anonymized_id</th>
+      <td><p>Anonymized ID for a single user.
+For a single user's CSV, you will get the JSON response immediately.</p></td>
+    </tr>
+    <tr>
+      <th>body</th>
+      <td><p>body sent to <code><a href='https://www.rdocumentation.org/packages/httr/topics/POST'>POST</a></code></p></td>
+    </tr>
+    <tr>
+      <th>api_key</th>
+      <td><p>API key for Leanpub, passed to <code><a href='lp_api_key.html'>lp_api_key</a></code></p></td>
+    </tr>
+    <tr>
+      <th>secure</th>
+      <td><p>passed to <code><a href='lp_base_url.html'>lp_base_url</a></code> for https</p></td>
+    </tr>
+    <tr>
+      <th>verbose</th>
+      <td><p>print diagnostic messages</p></td>
+    </tr>
+    <tr>
+      <th>query</th>
+      <td><p>query information to send to <code><a href='https://www.rdocumentation.org/packages/httr/topics/POST'>POST</a></code></p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>additional options to pass to <code>GET</code></p></td>
+    </tr>
     </table>
-  </div>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
+    <p>List of the result of the <code>POST</code> call and
+the content</p>
+    
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+
+    <p>See Author -&gt; Courses -&gt; Course Name -&gt; Quiz Responses
+on Leanpub</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='lp_api_key.html'>lp_have_api_key</a></span>()) {
+<span class='no'>slug</span> <span class='kw'>=</span> <span class='st'>"muschellitestcourse"</span>
+<span class='no'>res</span> <span class='kw'>=</span> <span class='fu'>lp_quiz_responses</span>(<span class='no'>slug</span>, <span class='kw'>error</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>2</span>)
+}</div><div class='output co'>#&gt; <span class='message'>URL is: https://leanpub.com/course_admin/leanpub/muschellitestcourse/quiz_response_data.json</span></div><div class='output co'>#&gt; <span class='error'>Error in httr::POST(url, httr::content_type(type), ...): formal argument "body" matched by multiple actual arguments</span></div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#value">Value</a></li>
+
+      <li><a href="#note">Note</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
     </ul>
+
   </div>
 </div>
 
