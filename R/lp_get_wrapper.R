@@ -88,6 +88,9 @@ lp_post_wrapper = function(
   path = paste0("/", slug, endpoint)
   path = paste0(path, ".json")
   url = paste0(url, path)
+  if (verbose > 1) {
+    message(paste0("URL is: ", url))
+  }
 
   if ("body" %in% names(L)) {
     body = L$body

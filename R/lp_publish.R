@@ -20,10 +20,9 @@ lp_publish = function(
   secure = TRUE,
   verbose = TRUE,
   ...) {
-  L = lp_get_wrapper(
+  L = lp_post_wrapper(
     slug = slug,
     endpoint = "/publish",
-    verb = "POST",
     api_key = api_key,
     secure = secure,
     verbose = verbose,

@@ -31,7 +31,7 @@ post_type = function(
   nonstop = FALSE, ...) {
 
   res = httr::POST(url,
-                   content_type(type), ...)
+                   httr::content_type(type), ...)
   if (verbose) {
     message("POST command is:")
     r = res
