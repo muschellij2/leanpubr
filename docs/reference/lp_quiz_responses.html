@@ -63,7 +63,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">leanpubr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.2</span>
       </span>
     </div>
 
@@ -179,10 +179,12 @@ on Leanpub</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='lp_api_key.html'>lp_have_api_key</a></span>()) {
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='kw'>if</span> (<span class='fu'><a href='lp_api_key.html'>lp_have_api_key</a></span>()) {
 <span class='no'>slug</span> <span class='kw'>=</span> <span class='st'>"muschellitestcourse"</span>
 <span class='no'>res</span> <span class='kw'>=</span> <span class='fu'>lp_quiz_responses</span>(<span class='no'>slug</span>, <span class='kw'>error</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>2</span>)
-}</div><div class='output co'>#&gt; <span class='message'>URL is: https://leanpub.com/course_admin/leanpub/muschellitestcourse/quiz_response_data.json</span></div><div class='output co'>#&gt; <span class='error'>Error in httr::POST(url, httr::content_type(type), ...): formal argument "body" matched by multiple actual arguments</span></div></pre>
+}
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

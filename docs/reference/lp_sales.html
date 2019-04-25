@@ -63,7 +63,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">leanpubr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.2</span>
       </span>
     </div>
 
@@ -179,22 +179,14 @@ the content</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fu'><a href='lp_api_key.html'>lp_have_api_key</a></span>()) {
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='kw'>if</span> (<span class='fu'><a href='lp_api_key.html'>lp_have_api_key</a></span>()) {
 <span class='no'>res1</span> <span class='kw'>=</span> <span class='fu'>lp_all_sales</span>(<span class='kw'>slug</span> <span class='kw'>=</span> <span class='st'>"biostatmethods"</span>)
 <span class='no'>nurl</span> <span class='kw'>=</span> <span class='fu'>lp_next_url</span>(<span class='no'>res1</span>)
 <span class='no'>res_next</span> <span class='kw'>=</span> <span class='fu'>lp_next</span>(<span class='no'>res1</span>)
 
-}</div><div class='output co'>#&gt; <span class='message'>GET command is:</span></div><div class='output co'>#&gt; Response [https://leanpub.com/biostatmethods/individual_purchases.json]
-#&gt;   Date: 2019-04-25 19:13
-#&gt;   Status: 200
-#&gt;   Content-Type: application/json; charset=utf-8
-#&gt;   Size: 24 kB
-#&gt; </div><div class='output co'>#&gt; <span class='message'>GET command is:</span></div><div class='output co'>#&gt; Response [https://leanpub.com/biostatmethods/individual_purchases.json?page=2]
-#&gt;   Date: 2019-04-25 19:13
-#&gt;   Status: 200
-#&gt;   Content-Type: application/json; charset=utf-8
-#&gt;   Size: 24 kB
-#&gt; </div></pre>
+}
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
