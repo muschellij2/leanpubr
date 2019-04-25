@@ -76,9 +76,10 @@ lp_post_wrapper = function(
   verbose = TRUE,
   ...) {
 
-  L = list(...)
-  if ("error" %in% names(L)) {
-    error = L$error
+  args = list(...)
+  if ("error" %in% names(args)) {
+    error = args$error
+    args$error = NULL
   } else {
     error = TRUE
   }
@@ -92,19 +93,21 @@ lp_post_wrapper = function(
     message(paste0("URL is: ", url))
   }
 
-  if ("body" %in% names(L)) {
-    body = L$body
+  if ("body" %in% names(args)) {
+    body = args$body
   } else {
     body = list()
   }
   body$api_key = api_key
+  args$body = body
+  args$url = url
+  args$verbose = verbose
 
-
-  L = post_type(
-    url = url,
-    body = body,
-    verbose = verbose,
-    ...)
+  L = do.call(post_type, args = args)
+    # url = url,
+    # body = body,
+    # verbose = verbose,
+    # ...)
 
   return(L)
 

@@ -43,7 +43,7 @@ Leanpub Sales Information
 See \url{https://leanpub.com/help/api}
 }
 \examples{
-\donttest{
+\dontrun{
 if (lp_have_api_key()) {
 res1 = lp_all_sales(slug = "biostatmethods")
 nurl = lp_next_url(res1)

@@ -1,3 +1,7 @@
+# leanpubr 0.3.2
+
+* Added `lp_quiz_responses` for quiz responses.
+
 # leanpubr 0.3.1
 
 * Minor fixes for CRAN.

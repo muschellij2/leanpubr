@@ -28,7 +28,7 @@ Leanpub Preview
 See \url{https://leanpub.com/help/api}
 }
 \examples{
-\donttest{
+\dontrun{
 if (lp_have_api_key()) {
 slug = "neuroimagingforstatisticians"
 res = lp_preview(slug, nonstop = FALSE, error = FALSE)

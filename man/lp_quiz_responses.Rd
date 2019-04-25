@@ -38,7 +38,7 @@ See Author -> Courses -> Course Name -> Quiz Responses
 on Leanpub
 }
 \examples{
-\donttest{
+\dontrun{
 if (lp_have_api_key()) {
 slug = "muschellitestcourse"
 res = lp_quiz_responses(slug, error = FALSE, verbose = 2)

@@ -27,7 +27,7 @@ lp_sales = function(
 #' @rdname lp_sales
 #' @export
 #' @param page page to extract for sales
-#' @examples \donttest{
+#' @examples \dontrun{
 #' if (lp_have_api_key()) {
 #' res1 = lp_all_sales(slug = "biostatmethods")
 #' nurl = lp_next_url(res1)
