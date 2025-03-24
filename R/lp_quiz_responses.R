@@ -9,7 +9,7 @@
 #' @note See Author -> Courses -> Course Name -> Quiz Responses
 #' on Leanpub
 #'
-#' @return List of the result of the \code{\link{POST}} call and
+#' @return List of the result of the \code{\link[httr]{POST}} call and
 #' the content
 #' @export
 #' @importFrom assertthat is.string

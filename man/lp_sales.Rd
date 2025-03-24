@@ -9,8 +9,14 @@
 \usage{
 lp_sales(slug, api_key = NULL, secure = TRUE, verbose = TRUE, ...)
 
-lp_all_sales(slug, api_key = NULL, secure = TRUE, verbose = TRUE,
-  page = NULL, ...)
+lp_all_sales(
+  slug,
+  api_key = NULL,
+  secure = TRUE,
+  verbose = TRUE,
+  page = NULL,
+  ...
+)
 
 lp_next_url(result)
 
@@ -25,7 +31,7 @@ lp_next(result, ...)
 
 \item{verbose}{print diagnostic messages}
 
-\item{...}{additional options to pass to \code{\link{GET}}}
+\item{...}{additional options to pass to \code{\link[httr]{GET}}}
 
 \item{page}{page to extract for sales}
 
@@ -33,7 +39,7 @@ lp_next(result, ...)
 a `response` slot in a list}
 }
 \value{
-List of the result of the \code{\link{GET}} call and
+List of the result of the \code{\link[httr]{GET}} call and
 the content
 }
 \description{

@@ -5,8 +5,7 @@
 \alias{lp_summary}
 \title{Leanpub Book Information}
 \usage{
-lp_book_info(slug, api_key = NULL, secure = TRUE, verbose = TRUE,
-  ...)
+lp_book_info(slug, api_key = NULL, secure = TRUE, verbose = TRUE, ...)
 
 lp_summary(slug, api_key = NULL, secure = TRUE, verbose = TRUE, ...)
 }
@@ -19,10 +18,10 @@ lp_summary(slug, api_key = NULL, secure = TRUE, verbose = TRUE, ...)
 
 \item{verbose}{print diagnostic messages}
 
-\item{...}{additional options to pass to \code{\link{GET}}}
+\item{...}{additional options to pass to \code{\link[httr]{GET}}}
 }
 \value{
-List of the result of the \code{\link{GET}} call and
+List of the result of the \code{\link[httr]{GET}} call and
 the content
 }
 \description{

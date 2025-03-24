@@ -5,11 +5,23 @@
 \alias{lp_post_wrapper}
 \title{Leanpub Wrapper for GET/POST statements}
 \usage{
-lp_get_wrapper(slug, endpoint, api_key = NULL, secure = TRUE,
-  verbose = TRUE, ...)
+lp_get_wrapper(
+  slug,
+  endpoint,
+  api_key = NULL,
+  secure = TRUE,
+  verbose = TRUE,
+  ...
+)
 
-lp_post_wrapper(slug, endpoint, api_key = NULL, secure = TRUE,
-  verbose = TRUE, ...)
+lp_post_wrapper(
+  slug,
+  endpoint,
+  api_key = NULL,
+  secure = TRUE,
+  verbose = TRUE,
+  ...
+)
 }
 \arguments{
 \item{slug}{slug of the project}
@@ -22,10 +34,10 @@ lp_post_wrapper(slug, endpoint, api_key = NULL, secure = TRUE,
 
 \item{verbose}{print diagnostic messages}
 
-\item{...}{additional options to pass to \code{\link{GET}}}
+\item{...}{additional options to pass to \code{\link[httr]{GET}}}
 }
 \value{
-List of the result of the \code{\link{GET}} call and
+List of the result of the \code{\link[httr]{GET}} call and
 the content
 }
 \description{

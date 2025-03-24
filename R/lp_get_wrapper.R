@@ -5,11 +5,11 @@
 #' @param api_key API key for Leanpub, passed to \code{\link{lp_api_key}}
 #' @param secure passed to \code{\link{lp_base_url}} for https
 #' @param verbose print diagnostic messages
-#' @param ... additional options to pass to \code{\link{GET}}
+#' @param ... additional options to pass to \code{\link[httr]{GET}}
 #'
 #' @note See \url{https://leanpub.com/help/api}
 #'
-#' @return List of the result of the \code{\link{GET}} call and
+#' @return List of the result of the \code{\link[httr]{GET}} call and
 #' the content
 #' @export
 #'

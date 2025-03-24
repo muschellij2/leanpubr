@@ -4,7 +4,7 @@
 #'
 #' @note See \url{https://leanpub.com/help/api}
 #'
-#' @return List of the result of the \code{\link{GET}} call and
+#' @return List of the result of the \code{\link[httr]{GET}} call and
 #' the content
 #' @export
 #'

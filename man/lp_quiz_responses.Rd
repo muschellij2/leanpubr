@@ -4,9 +4,16 @@
 \alias{lp_quiz_responses}
 \title{Leanpub Quiz Responses for a Course}
 \usage{
-lp_quiz_responses(slug, anonymized_id = NULL, body = list(),
-  api_key = NULL, secure = TRUE, verbose = TRUE, query = list(),
-  ...)
+lp_quiz_responses(
+  slug,
+  anonymized_id = NULL,
+  body = list(),
+  api_key = NULL,
+  secure = TRUE,
+  verbose = TRUE,
+  query = list(),
+  ...
+)
 }
 \arguments{
 \item{slug}{slug of the project}
@@ -24,10 +31,10 @@ For a single user's CSV, you will get the JSON response immediately.}
 
 \item{query}{query information to send to \code{\link[httr]{POST}}}
 
-\item{...}{additional options to pass to \code{\link{GET}}}
+\item{...}{additional options to pass to \code{\link[httr]{GET}}}
 }
 \value{
-List of the result of the \code{\link{POST}} call and
+List of the result of the \code{\link[httr]{POST}} call and
 the content
 }
 \description{

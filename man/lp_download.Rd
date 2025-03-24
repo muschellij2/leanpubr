@@ -4,8 +4,14 @@
 \alias{lp_download}
 \title{Leanpub Download Latest Version}
 \usage{
-lp_download(slug, format = c("pdf", "mobi", "epub"), api_key = NULL,
-  secure = TRUE, verbose = TRUE, ...)
+lp_download(
+  slug,
+  format = c("pdf", "mobi", "epub"),
+  api_key = NULL,
+  secure = TRUE,
+  verbose = TRUE,
+  ...
+)
 }
 \arguments{
 \item{slug}{slug of the project}
@@ -18,10 +24,10 @@ lp_download(slug, format = c("pdf", "mobi", "epub"), api_key = NULL,
 
 \item{verbose}{print diagnostic messages}
 
-\item{...}{additional options to pass to \code{\link{GET}}}
+\item{...}{additional options to pass to \code{\link[httr]{GET}}}
 }
 \value{
-List of the result of the \code{\link{GET}} call and
+List of the result of the \code{\link[httr]{GET}} call and
 the content
 }
 \description{
