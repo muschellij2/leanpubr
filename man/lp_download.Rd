@@ -6,7 +6,7 @@
 \usage{
 lp_download(
   slug,
-  format = c("pdf", "mobi", "epub"),
+  format = c("pdf", "epub"),
   api_key = NULL,
   secure = TRUE,
   verbose = TRUE,
@@ -40,7 +40,7 @@ See \url{https://leanpub.com/help/api}
 if (lp_have_api_key()) {
 slug = "biostatmethods"
 res = lp_download(slug, verbose = FALSE, nonstop = TRUE, error = FALSE,
-format = "mobi")
+format = "epub")
 file.exists(res)
 }
 }

@@ -13,12 +13,12 @@
 #' if (lp_have_api_key()) {
 #' slug = "biostatmethods"
 #' res = lp_download(slug, verbose = FALSE, nonstop = TRUE, error = FALSE,
-#' format = "mobi")
+#' format = "epub")
 #' file.exists(res)
 #' }
 lp_download = function(
   slug,
-  format = c("pdf", "mobi", "epub"),
+  format = c("pdf", "epub"),
   api_key = NULL,
   secure = TRUE,
   verbose = TRUE,
