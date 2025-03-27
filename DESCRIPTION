@@ -1,5 +1,5 @@
 Package: leanpubr
-Version: 0.3.3
+Version: 0.3.4
 Title: 'Leanpub' API Interface
 Description: Provides access to the 'Leanpub' API
     <https://leanpub.com/help/api> for gathering information about 
