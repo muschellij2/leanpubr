@@ -2,12 +2,6 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/muschellij2/leanpubr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/muschellij2/leanpubr/actions/workflows/R-CMD-check.yaml)
-[![Travis build
-status](https://travis-ci.org/muschellij2/leanpubr.svg?branch=master)](https://travis-ci.org/muschellij2/leanpubr)
-[![AppVeyor Build
-Status](https://ci.appveyor.com/api/projects/status/github/muschellij2/leanpubr?branch=master&svg=true)](https://ci.appveyor.com/project/muschellij2/leanpubr)
-[![Coverage
-status](https://coveralls.io/repos/github/muschellij2/leanpubr/badge.svg?branch=master)](https://coveralls.io/r/muschellij2/leanpubr?branch=master)
 <!-- badges: end -->
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -30,12 +24,12 @@ remotes::install_github("muschellij2/leanpubr")
 ## Setting the API key
 
 The main thing you need to do is get an API key from Leanpub. You can do
-this by visiting <https://leanpub.com/author_dashboard/settings> if you
-are an author. If you are not an author, I don’t believe access to the
-API is possible. You can pass this `api_key` to functions in Leanpub
-(almost all prefixed by `lp_`), or you can set the environmental
-variable `LEANPUB_API_KEY`. You can set this in an interactive `R`
-session such as:
+this by visiting <https://leanpub.com/user_dashboard/api_key> if you are
+an author. If you are not an author, I don’t believe access to the API
+is possible. You can pass this `api_key` to functions in Leanpub (almost
+all prefixed by `lp_`), or you can set the environmental variable
+`LEANPUB_API_KEY`. You can set this in an interactive `R` session such
+as:
 
 ``` r
 Sys.setenv("LEANPUB_API_KEY" = "YOUR_KEY")
@@ -57,7 +51,7 @@ slug = "biostatmethods"
 res = lp_book_info(slug, error = FALSE, verbose = TRUE)
 #> GET command is:
 #> Response [https://leanpub.com/login]
-#>   Date: 2025-03-27 19:11
+#>   Date: 2025-04-01 15:23
 #>   Status: 200
 #>   Content-Type: text/html; charset=utf-8
 #>   Size: 25.4 kB
