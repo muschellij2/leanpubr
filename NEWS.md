@@ -1,3 +1,7 @@
+# leanpubr 0.4.0
+
+* Fixing the \link issues with packages.
+
 # leanpubr 0.3.2
 
 * Added `lp_quiz_responses` for quiz responses.
