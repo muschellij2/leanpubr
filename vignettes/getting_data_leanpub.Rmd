@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 The goal of `leanpubr` is to provide provides access to the 'Leanpub' 'API' <https://leanpub.com/help/api> for gathering information about publications and submissions to the 'Leanpub' platform.
 
 ## Setting the API key
-The main thing you need to do is get an API key from Leanpub.  You can do this by visiting https://leanpub.com/author_dashboard/settings if you are an author.  If you are not an author, I don't believe access to the API is possible.  You can pass this `api_key` to functions in Leanpub (almost all prefixed by `lp_`), or you can set the environmental variable `LEANPUB_API_KEY`.  You can set this in an interactive `R` session such as:
+The main thing you need to do is get an API key from Leanpub.  You can do this by visiting https://leanpub.com/user_dashboard/api_key if you are an author.  If you are not an author, I don't believe access to the API is possible.  You can pass this `api_key` to functions in Leanpub (almost all prefixed by `lp_`), or you can set the environmental variable `LEANPUB_API_KEY`.  You can set this in an interactive `R` session such as:
 
 ```r
 Sys.setenv("LEANPUB_API_KEY" = "YOUR_KEY")

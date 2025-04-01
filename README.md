@@ -51,7 +51,7 @@ slug = "biostatmethods"
 res = lp_book_info(slug, error = FALSE, verbose = TRUE)
 #> GET command is:
 #> Response [https://leanpub.com/login]
-#>   Date: 2025-04-01 15:23
+#>   Date: 2025-04-01 15:44
 #>   Status: 200
 #>   Content-Type: text/html; charset=utf-8
 #>   Size: 25.4 kB
